@@ -1,11 +1,16 @@
-  name: Edrig
-  main: com.edrig.Edrig.main
-  version: 0.1
+name: Edrig
+main: com.edrig.Edrig.main
+version: 0.1
+author: Edrig
+description: This description is a stub.
  
-  commands:
-    yolo:
-    description: Notre commande.
+commands:
+  yolo:
+    description: This description is for template1
     usage: /yolo
-    permission: 
-    permission-message: Vous n'avez pas la permission d'utiliser cette commande ! 
-
+    aliases: [Edrig]
+  template2:
+    description: This description is for template2
+    usage: |
+          /<command> do whatever template2 does
+    aliases: [tmpl2]
