@@ -1,0 +1,10 @@
+name:Edrig
+main:com.edrig.test.main
+version:0.1
+ 
+commands:
+    yolo:
+        description:Notre commande.
+        usage:/yolo
+        permission: 
+        permission-message:Vous n'avez pas la permission d'utiliser cette commande ! 
