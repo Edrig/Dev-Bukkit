@@ -2,6 +2,7 @@ package com.edrig.Edrig;
 
 import java.util.logging.Logger;
 
+
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -18,41 +19,38 @@ public class main extends JavaPlugin implements Listener
 {
     public final Logger logger = Logger.getLogger("Minecraft");
 	private Scoreboard board;
-    //Scoreboard board;
     
 	public void onEnable() 
     {
+		
 		Bukkit.getServer().getPluginManager().registerEvents(this, this);
         getCommand("yolo").setExecutor(new EdrigCommandExecutor(this));
-        
+        getCommand("Gstart").setExecutor(new EdrigCommandExecutor(this));
+
         ScoreboardManager manager = Bukkit.getScoreboardManager();
         Scoreboard board = manager.getNewScoreboard();
         Objective objective = board.registerNewObjective("HP", "health");
         
         objective.setDisplaySlot(DisplaySlot.SIDEBAR);
-        objective.setDisplayName("HP");
-        
-        this.board = board;
-    }
+		objective.setDisplayName("Health");
 
+		this.board = board;
+    }
+	
 	public void onDisable()
 	{
-        /*for(Player online : Bukkit.getOnlinePlayers()){
-        	online.setScoreboard(manager.getNewScoreboard());
-        }*/
+
 	}
-	
+
 	@EventHandler
 	public void onPlayerJoin(PlayerJoinEvent evt)
 	{
 	Player player = evt.getPlayer();
 	player.setScoreboard(board);
-    /*Score score = objective.getScore(player);
-    score.setScore(5); //Example*/
 	}
 	
 	@EventHandler
-	 public void onPlayerQuit(PlayerQuitEvent evt)
+	public void onPlayerQuit(PlayerQuitEvent evt)
 	{
 	Player player = evt.getPlayer();
 	board.resetScores(player);

@@ -9,8 +9,8 @@ commands:
     description: This description is for template1
     usage: /yolo
     aliases: [Edrig]
-  template2:
+  Gstart:
     description: This description is for template2
-    usage: |
+    usage: /Gstart
           /<command> do whatever template2 does
     aliases: [tmpl2]
