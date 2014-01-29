@@ -24,15 +24,7 @@ public class main extends JavaPlugin implements Listener
         getCommand("Gstart").setExecutor(new EdrigCommandExecutor(this));
 
         ScoreBoard.initScoreBoard();
-        
-        /*ScoreboardManager manager = Bukkit.getScoreboardManager();
-        Scoreboard board = manager.getNewScoreboard();
-        Objective objective = board.registerNewObjective("HP", "health");
-        
-        objective.setDisplaySlot(DisplaySlot.SIDEBAR);
-                objective.setDisplayName("Health");
 
-                this.board = board;*/
     }
         
         public void onDisable()
