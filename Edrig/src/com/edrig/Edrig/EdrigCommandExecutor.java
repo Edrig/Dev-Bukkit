@@ -32,7 +32,7 @@ public class EdrigCommandExecutor implements CommandExecutor
 
 		public void startGame()
 		{
-			int timer = 10;
+			/*int timer = 10;
 			
 			while (timer != 0)
         			{
@@ -40,7 +40,7 @@ public class EdrigCommandExecutor implements CommandExecutor
         				
         				timer--;
         				
-        			}
-			Bukkit.broadcastMessage(ChatColor.RED +"Edrig-Game Starting !"); // On envoie un message au joueur qui a tapée la commande, pour vous prouver que ca marche!
+        			}*/
+			Bukkit.broadcastMessage(ChatColor.RED +"Edrig-Game Starting Now !");
 		}
 }

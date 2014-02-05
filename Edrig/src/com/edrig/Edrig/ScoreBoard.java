@@ -1,13 +1,14 @@
 package com.edrig.Edrig;
 
 import org.bukkit.Bukkit;
+import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scoreboard.DisplaySlot;
 import org.bukkit.scoreboard.Objective;
 import org.bukkit.scoreboard.Score;
 import org.bukkit.scoreboard.Scoreboard;
 import org.bukkit.scoreboard.ScoreboardManager;
 
-public class ScoreBoard 
+public class ScoreBoard extends JavaPlugin
 {
 
 	public static ScoreboardManager manager;
@@ -19,8 +20,9 @@ public class ScoreBoard
        {
     	   manager = Bukkit.getScoreboardManager();
            board = manager.getNewScoreboard();
-           objective = board.registerNewObjective("HP", "health");
-           
+          
+          
+           objective = board.registerNewObjective("HP", "health");   
            objective.setDisplaySlot(DisplaySlot.SIDEBAR);
            objective.setDisplayName("Health");
        }
@@ -33,5 +35,7 @@ public class ScoreBoard
                        return objective;
                }
        }
+
+
 }
 

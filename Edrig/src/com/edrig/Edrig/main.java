@@ -25,13 +25,15 @@ public class main extends JavaPlugin implements Listener
 
         ScoreBoard.initScoreBoard();
 
-    }
+        this.saveDefaultConfig();
+        
+        }
         
         public void onDisable()
         {
-
+        	this.reloadConfig();
         }
-
+        
         @EventHandler
         public void onPlayerJoin(PlayerJoinEvent evt)
         {
